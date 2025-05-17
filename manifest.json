@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Split Downloads",
+    "version": "1.0",
+    "description": "指定したフォルダにファイルをダウンロードする拡張機能",
+    "permissions": [
+        "downloads"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://room.chuo-u.ac.jp/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    }
+}
